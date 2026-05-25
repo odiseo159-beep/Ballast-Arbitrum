@@ -1,0 +1,25 @@
+{
+  "name": "@ballast/backend",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Ballast agent backend — Claude tool-calling + autonomous DCA scheduler + on-chain oracle.",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.65.0",
+    "@ballast/shared": "workspace:*",
+    "@hono/node-server": "^1.13.7",
+    "dotenv": "^16.4.5",
+    "hono": "^4.6.14",
+    "viem": "^2.21.40",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

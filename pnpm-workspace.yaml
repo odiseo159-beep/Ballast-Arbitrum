@@ -1,0 +1,8 @@
+packages:
+  - 'packages/*'
+allowBuilds:
+  bufferutil: false
+  esbuild: true
+  keccak: true
+  secp256k1: true
+  utf-8-validate: false

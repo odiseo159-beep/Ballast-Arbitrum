@@ -1,0 +1,26 @@
+{
+  "name": "@ballast/contracts",
+  "version": "0.0.0",
+  "private": true,
+  "description": "AllocationDesk — Ballast settlement contract on Robinhood Chain.",
+  "scripts": {
+    "build": "hardhat compile && tsx scripts/extract-abis.ts",
+    "extract-abis": "tsx scripts/extract-abis.ts",
+    "test": "hardhat test",
+    "test:gas": "REPORT_GAS=true hardhat test",
+    "coverage": "hardhat coverage",
+    "deploy:testnet": "tsx scripts/deploy.ts",
+    "fund-reserves": "tsx scripts/fund-reserves.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ballast/shared": "workspace:*",
+    "@openzeppelin/contracts": "^5.1.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.16",
+    "tsx": "^4.19.2"
+  }
+}

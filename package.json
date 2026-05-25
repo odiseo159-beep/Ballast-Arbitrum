@@ -1,0 +1,32 @@
+{
+  "name": "ballast",
+  "version": "0.0.0",
+  "private": true,
+  "description": "AI agent that helps non-US savers protect and grow savings in tokenized US blue-chip stocks on Robinhood Chain.",
+  "license": "MIT",
+  "packageManager": "pnpm@11.1.2",
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=10"
+  },
+  "scripts": {
+    "derisk": "tsx scripts/derisk.ts",
+    "contracts:build": "pnpm --filter @ballast/contracts build",
+    "contracts:test": "pnpm --filter @ballast/contracts test",
+    "contracts:deploy": "pnpm --filter @ballast/contracts deploy:testnet",
+    "contracts:fund-reserves": "pnpm --filter @ballast/contracts fund-reserves",
+    "backend:dev": "pnpm --filter @ballast/backend dev",
+    "frontend:dev": "pnpm --filter @ballast/frontend dev",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "dependencies": {
+    "@ballast/shared": "workspace:*",
+    "dotenv": "^16.4.5",
+    "viem": "^2.21.40"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}
