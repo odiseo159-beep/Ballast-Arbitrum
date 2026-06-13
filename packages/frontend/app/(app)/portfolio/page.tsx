@@ -12,6 +12,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useAccount } from 'wagmi';
 import { EXPLORER_URL, STOCK_SYMBOLS, type StockSymbol } from '@ballast/shared';
 import { AnchorMark } from '@/components/anchor-mark';
+import { StockIcon } from '@/components/stock-icon';
 import { useBallastUser } from '@/components/ballast-context';
 import { api, type ActivityEvent, type DcaPlanResponse, type PortfolioResponse } from '@/lib/api';
 import { FAUCET_URL } from '@/lib/chain';
@@ -769,13 +770,9 @@ function HoldingsCard({
                 background: h.color,
                 display: 'grid',
                 placeItems: 'center',
-                color: 'var(--deep-ocean)',
-                fontWeight: 700,
-                fontSize: 11,
-                fontFamily: 'var(--font-mono), ui-monospace, monospace',
               }}
             >
-              {h.ticker}
+              <StockIcon ticker={h.ticker} size={22} />
             </div>
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ fontSize: 13.5, fontWeight: 600 }}>{h.name}</div>

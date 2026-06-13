@@ -1,0 +1,12 @@
+# Nixpacks build config for Railway — pnpm monorepo backend deploy.
+# The backend lives in packages/backend; we filter the install + run.
+
+[phases.setup]
+nixPkgs = ["nodejs_22", "pnpm-11_x"]
+aptPkgs = ["build-essential"]
+
+[phases.install]
+cmds = ["pnpm install --frozen-lockfile"]
+
+[start]
+cmd = "pnpm --filter @ballast/backend start"

@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import Link from 'next/link';
 import { AnchorMark } from '@/components/anchor-mark';
+import { StockIcon } from '@/components/stock-icon';
 
 // ─────────────────────────── Helpers ───────────────────────────
 
@@ -159,13 +160,9 @@ function StockChip({
           background: color,
           display: 'grid',
           placeItems: 'center',
-          color: 'var(--deep-ocean)',
-          fontWeight: 700,
-          fontSize: 11,
-          fontFamily: 'var(--font-mono), ui-monospace, monospace',
         }}
       >
-        {ticker.slice(0, 4)}
+        <StockIcon ticker={ticker} size={18} />
       </div>
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ fontWeight: 600, fontSize: 13 }}>{name}</div>
@@ -1552,13 +1549,9 @@ function ActivityFeedLanding({
                 background: item.color,
                 display: 'grid',
                 placeItems: 'center',
-                color: 'var(--deep-ocean)',
-                fontWeight: 700,
-                fontSize: 11,
-                fontFamily: 'var(--font-mono), ui-monospace, monospace',
               }}
             >
-              {item.ticker}
+              <StockIcon ticker={item.ticker} size={22} />
             </div>
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ fontSize: 13.5, color: 'var(--mist)' }}>
