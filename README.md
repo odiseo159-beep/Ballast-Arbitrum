@@ -4,6 +4,12 @@
 
 **Built for the [Arbitrum Open House London Online Buildathon](https://hackquest.io/), targeting the Best Agentic Project track on Robinhood Chain.**
 
+## Live
+
+- **App:** [ballast-arbitrum.vercel.app](https://ballast-arbitrum.vercel.app)
+- **Source:** [github.com/odiseo159-beep/Ballast-Arbitrum](https://github.com/odiseo159-beep/Ballast-Arbitrum)
+- **Contract:** [`AllocationDesk`](https://explorer.testnet.chain.robinhood.com/address/0xa7fa026636e8c4ee535f44b28784f5f5324125e0) on Robinhood Chain Testnet (chainId `46630`)
+
 ---
 
 ## The problem
@@ -100,6 +106,7 @@ docs/
   SPEC.md       full product + technical spec
   BUILD_PLAN.md ordered checklist by phase
   DESIGN_BRIEF.md  visual / brand direction
+  DEPLOYMENT.md    live URLs, deploy runbook, gotchas
 design/         original React mockups for the four screens
 ```
 
@@ -113,7 +120,7 @@ design/         original React mockups for the four screens
 | PLTR | `0x1FBE1a0e43594b3455993B5dE5Fd0A7A266298d0` |
 | NFLX | `0x3b8262A63d25f0477c4DDE23F83cfe22Cb768C93` |
 | AMD  | `0x71178BAc73cBeb415514eB542a8995b82669778d` |
-| **AllocationDesk** | _filled by `pnpm contracts:deploy` → see `packages/shared/src/deployment.testnet.json`_ |
+| **AllocationDesk** | [`0xa7fa026636e8c4ee535f44b28784f5f5324125e0`](https://explorer.testnet.chain.robinhood.com/address/0xa7fa026636e8c4ee535f44b28784f5f5324125e0) |
 
 Explorer: <https://explorer.testnet.chain.robinhood.com>
 
@@ -121,7 +128,7 @@ Explorer: <https://explorer.testnet.chain.robinhood.com>
 
 ## Run it locally
 
-Prereqs: Node ≥ 20, pnpm ≥ 10, a MetaMask (or other injected) wallet, and accounts on [Alchemy](https://alchemy.com) (for the RPC) and [console.anthropic.com](https://console.anthropic.com) (for the LLM key).
+Prereqs: Node ≥ 22.13, pnpm ≥ 10, a MetaMask (or other injected) wallet, and accounts on [Alchemy](https://alchemy.com) (for the RPC) and [console.anthropic.com](https://console.anthropic.com) (for the LLM key).
 
 ```sh
 # 1. Install
